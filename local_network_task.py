@@ -39,7 +39,7 @@ class Router:
             self.linked_servers.remove(server)
 
     def send_data(self):
-        for data in self.linked_servers:
+        for data in self.buffer:
             for server in self.linked_servers:
                 if server.get_ip() == data.ip:
                     server.buffer.append(data)
